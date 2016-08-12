@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "head.html" %}
+    <h1>New Item</h1>
+      <form action="" method="post">
+        Name:<br><input type="text", name ="name"><br><br>
+        Description:<br><input type="text", name ="description"><br><br>
+        Category:<br>
+        <select name="category">
+          <option value="1">Soccer</option>
+          <option value="2">Basketball</option>
+          <option value="3">Football</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+{% endblock %}

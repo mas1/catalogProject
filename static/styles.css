@@ -1,0 +1,16 @@
+* {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+hr {
+  background-color: #616161;
+  padding-top: 2px;
+}
+
+.top-menu {
+font-size: 20px;
+margin-top: 25px;
+margin-bottom: 5px;
+padding: 10px 2px 0px 5px;
+}

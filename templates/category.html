@@ -1,0 +1,9 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "head.html" %}
+    <h1>{{ category.name }}</h1>
+      <a href="{{url_for('newCategoryItem')}}">New Item</a>
+      {% for i in items %}
+      <h4><a href="{{url_for('showCategoryItem', category_id=i.category_id, item_name=i.name)}}">{{i.name}}</a></h4>
+      {% endfor %}
+{% endblock %}

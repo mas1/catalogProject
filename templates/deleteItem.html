@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "head.html" %}
+    <h1>Delete {{item.name}}?</h1>
+      <br><br>
+      <form action="#" method = 'post'>
+        <input type="submit" value="Accept">
+      </form>
+      <a href="/catalog">Cancel</a>
+{% endblock %}
