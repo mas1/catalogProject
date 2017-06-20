@@ -9,16 +9,16 @@ Base = declarative_base()
 
 
 class User(Base):
-	__tablename__ = 'user'
-	id = Column(Integer, primary_key=True)
-	name = Column(String(250), nullable=False)
-	email = Column(String(250), nullable=False)
-	picture = Column(String(250))
+    __tablename__ = 'user'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(250), nullable=False)
+    email = Column(String(250), nullable=False)
+    picture = Column(String(250))
+
 
 class Categories(Base):
     __tablename__ = 'categories'
-
-    id = Column( Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
     name = Column(String(80), nullable=False)
 
     @property
@@ -33,7 +33,7 @@ class Categories(Base):
 class Items(Base):
     __tablename__ = 'items'
 
-    id = Column( Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
     name = Column(String(80), nullable=False)
     description = Column(String(250))
     category_id = Column(Integer, ForeignKey('categories.id'))
@@ -50,7 +50,6 @@ class Items(Base):
             'id': self.id,
             'category_id': self.category_id,
         }
-
 
 
 engine = create_engine('sqlite:///catalog.db')
