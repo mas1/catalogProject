@@ -19,14 +19,14 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-
 category1 = Categories(name="Soccer")
 
 session.add(category1)
 session.commit()
 
-categoryItem1 = Items(name="Soccer Ball", description="A ball used to play Soccer",
- category=category1)
+categoryItem1 = Items(name="Soccer Ball",
+                      description="A ball used to play Soccer",
+                      category=category1)
 
 session.add(categoryItem1)
 session.commit()
@@ -36,8 +36,9 @@ category2 = Categories(name="Basketball")
 session.add(category2)
 session.commit()
 
-categoryItem2 = Items(name="Basketball", description="A ball used to play bball. Bouncy",
- category=category2)
+categoryItem2 = Items(name="Basketball",
+                      description="A ball used to play bball. Bouncy",
+                      category=category2)
 
 session.add(categoryItem2)
 session.commit()
@@ -48,13 +49,10 @@ session.add(category3)
 session.commit()
 
 categoryItem3 = Items(name="Helmet", description="Very protective.",
- category=category3)
+                      category=category3)
 
- session.add(categoryItem3)
- session.commit()
-
-
-
+session.add(categoryItem3)
+session.commit()
 
 
 print "added items!"
